@@ -140,10 +140,10 @@ h2 {
     color: var(--blue-text-light);
     outline: none;
     border-radius: 120px;
-    background-color: rgb(30, 38, 49);
+    background-color: rgb(40, 75, 123);
     display: inline-block;
-    box-shadow:  0px 0px 39px 14px rgb(23, 25, 28);
-    -webkit-box-shadow:  0px 0px 39px 14px rgb(23, 25, 28);
+    box-shadow:  0px 0px 39px 14px rgb(38, 55, 81);
+    -webkit-box-shadow:  0px 0px 39px 14px rgb(38, 55, 81);
 }
 
 #stopButton {
@@ -154,7 +154,7 @@ h2 {
     color: var(--blue-text-light);
     outline: none;
     border-radius: 120px;
-    background-color: rgb(49, 30, 38);
+    background-color: rgb(113, 47, 59);
     display: inline-block;
 }
 
@@ -177,6 +177,18 @@ h2 {
     }
   }
 
+  @-webkit-keyframes sploosh {
+    0% {
+      box-shadow: 0 0 2px 0px rgba(38, 55, 81, .7);
+      background: rgba(38, 55, 81, .7);
+    }
+    80% {
+      background: rgba(66, 166, 223, 0);
+    }
+    100% {
+      box-shadow: 0 0 2px 15px rgba(38, 55, 81, 0);
+    }
+  }
 
 hr {
     border: 0;
@@ -259,4 +271,18 @@ hr {
 
 #about{
 color: var(--blue-text-light);
+}
+
+.highlight-button{
+    
+    animation-name: sploosh;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: #1b1c1f !important;
+    background-color: rgb(153, 177, 215) !important;
+}
+
+#info1NextButton{
+    margin-right: 20px;
 }
